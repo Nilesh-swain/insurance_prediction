@@ -1,44 +1,21 @@
+```yaml
 services:
   - type: web
     name: insurance-api
     runtime: python
-    pythonVersion: "3.11"
-    
-    # Root directory where render commands execute
-    rootDir: ./
-    
-    # Build command to install dependencies
+
+    plan: free
+
     buildCommand: pip install -r requirements.txt
-    
-    # Command to start the application
-    startCommand: uvicorn main:app --host 0.0.0.0 --port 8000
-    
-    # Environment variables
+
+    startCommand: uvicorn main:app --host 0.0.0.0 --port $PORT
+
     envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+
       - key: PYTHONUNBUFFERED
-        value: "true"
-      - key: PORT
-        value: "8000"
-    
-    # Health check configuration
-    healthCheckPath: /health
-    
-    # Resource allocation
-    plan: free  # free, starter, standard, etc.
-    numInstances: 1
-    
-    # Auto-deploy settings
+        value: true
+
     autoDeploy: true
-    
-    # Build configuration
-    buildFilter:
-      paths:
-        - main.py
-        - requirements.txt
-        - insurance_randomforest.pkl
-        - .gitignore
-      ignoredPaths:
-        - venv/
-        - __pycache__/
-        - .pytest_cache/
-        - .env
+```
