@@ -1,0 +1,239 @@
+```gitignore
+# ============================================================================
+# PRIORITY: VIRTUAL ENVIRONMENTS & DEPENDENCIES (MUST IGNORE FIRST)
+# ============================================================================
+# These directories contain thousands of files and should NEVER be committed
+venv/
+env/
+.venv/
+ENV/
+env.bak/
+venv.bak/
+.env.bak
+# Python site-packages (if accidentally added)
+lib/
+lib64/
+site-packages/
+
+# ============================================================================
+# PYTHON CORE
+# ============================================================================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# ============================================================================
+# IDEs & EDITORS
+# ============================================================================
+# VS Code
+.vscode/
+*.code-workspace
+
+# PyCharm
+.idea/
+*.iml
+*.iws
+*.ipr
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+.vim/
+*.swp
+*.swo
+*~
+.netrwhist
+
+# Emacs
+*~
+\#*\#
+.\#*
+
+# ============================================================================
+# ENVIRONMENT & SECRETS
+# ============================================================================
+.env
+.env.local
+.env.*.local
+!.env.example
+!.env.example.*
+
+# ============================================================================
+# FASTAPI & APPLICATION
+# ============================================================================
+# Logs
+*.log
+logs/
+uvicorn.log
+app.log
+error.log
+debug.log
+
+# Uploads & Media
+uploads/
+media/
+static/user-content/
+
+# FastAPI temp files
+__pypackages__/
+
+# ============================================================================
+# DATABASE & DATA
+# ============================================================================
+*.db
+*.sqlite
+*.sqlite3
+*.sqlite-wal
+*.sqlite-shm
+data/
+*.csv
+*.xlsx
+
+# ============================================================================
+# TESTING & COVERAGE
+# ============================================================================
+.pytest_cache/
+.coverage
+.coverage.*
+htmlcov/
+.hypothesis/
+coverage.xml
+*.cover
+
+# ============================================================================
+# CODE QUALITY & LINTING
+# ============================================================================
+.mypy_cache/
+.dmypy.json
+dmypy.json
+.pyre/
+.ruff_cache/
+*.pyi
+.pylint.d/
+
+# Black, isort, flake8
+.pre-commit-config.yaml
+
+# ============================================================================
+# JUPYTER & NOTEBOOKS
+# ============================================================================
+.ipynb_checkpoints
+*.ipynb_checkpoints
+.jupyter/
+*.ipynb
+
+# ============================================================================
+# OPERATING SYSTEMS
+# ============================================================================
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+
+# Linux
+.directory
+
+# ============================================================================
+# PACKAGE MANAGERS
+# ============================================================================
+# Poetry
+poetry.lock
+dist/
+
+# Pipenv
+Pipfile.lock
+
+# PEP 582
+__pypackages__/
+
+# ============================================================================
+# MONITORING & TOOLS
+# ============================================================================
+# Celery
+celerybeat-schedule
+celerybeat.pid
+
+# SageMath
+.sage.py
+
+# Rope
+.ropeproject
+
+# ============================================================================
+# TEMPORARY & CACHE FILES
+# ============================================================================
+*.tmp
+*.temp
+*.bak
+*.cache
+tmp/
+temp/
+*.pid
+
+# ============================================================================
+# IDE SPECIFIC DIRECTORIES
+# ============================================================================
+.venv*/
+.env*/
+.project
+.pydevproject
+.settings/
+
+# =========================
+# Machine Learning
+# =========================
+mlruns/
+artifacts/
+models/
+*.pkl
+*.joblib
+*.h5
+*.onnx
+
+# =========================
+# Node Modules (if frontend exists)
+# =========================
+node_modules/
+
+# =========================
+# Docker
+# =========================
+*.pid
+*.seed
+*.pid.lock
+
+# =========================
+# Secrets & Keys
+# =========================
+*.pem
+*.key
+secrets.json
+```
