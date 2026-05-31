@@ -265,15 +265,72 @@ curl -X POST "http://127.0.0.1:8000/predict" \
 
 ---
 
+# ☁️ Deployment on Render
+
+### Prerequisites
+- GitHub account with repository pushed
+- Render account (free tier available)
+
+### Step 1: Connect Your Repository
+
+1. Go to [render.com](https://render.com)
+2. Sign in with GitHub
+3. Click **"New Web Service"**
+4. Connect your GitHub repository
+
+### Step 2: Configure Service
+
+**Build Command:**
+```bash
+pip install -r requirements.txt
+```
+
+**Start Command:**
+```bash
+uvicorn main:app --host 0.0.0.0 --port 8000
+```
+
+**Root Directory (Optional):** `./`
+
+### Step 3: Set Environment Variables
+
+| Key | Value |
+|-----|-------|
+| `PYTHONUNBUFFERED` | `true` |
+| `PORT` | `8000` |
+
+### Step 4: Deploy
+
+Click **"Deploy"** and Render will:
+- Install dependencies from `requirements.txt`
+- Start your FastAPI server
+- Provide a public URL
+
+### Step 5: Test Live API
+
+Your API will be available at:
+```
+https://your-service-name.onrender.com/docs
+```
+
+### Auto-Deploy Configuration
+
+Update your `render.yaml` to control what triggers auto-deploy:
+- Only deploy when files in `main.py`, `requirements.txt` change
+- Ignore changes in `venv/`, `__pycache__/`
+
+---
+
 # 🚀 Future Enhancements
 
 * 🌐 Frontend Dashboard
 * 🐳 Docker Support
-* ☁️ Cloud Deployment
+* ☁️ Advanced Cloud Monitoring
 * 🔐 JWT Authentication
-* 📈 Model Monitoring
+* 📈 Model Performance Monitoring
 * 🔄 CI/CD Integration
 * 📊 Data Visualization
+* 📱 Mobile App
 
 ---
 
